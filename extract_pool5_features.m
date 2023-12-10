@@ -4,13 +4,13 @@ imagedata='oxford5k_image';
 net=vgg16;
 netname='vgg16';
 layer='pool5';
-extract_features(imagedata,net,netname,layer)
+extract_net_features(imagedata,net,netname,layer)
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function []=extract_features(imagedata,net,netname,layer)
+function []=extract_net_features(imagedata,net,netname,layer)
 
 imagePath = dir(fullfile('G:\zhangbojian\matlab_paper\data\VGG16\datasets\',imagedata,'*.jpg'));
 minsize=224;
