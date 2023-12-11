@@ -11,7 +11,7 @@ end
 qvecs_qe = normalize(qvecs_qe,1,'norm');
 
 
-PW_dist=pdist2(PW_test_features_pca',qvecs_qe','euclidean');%计算L2距离
+PW_dist=pdist2(PW_test_features_pca',qvecs_qe','euclidean');
 [~, ranks_QE] = sort(PW_dist, 'ascend');
 
 end
