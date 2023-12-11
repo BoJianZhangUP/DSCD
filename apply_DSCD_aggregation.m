@@ -32,8 +32,8 @@ if var(SR(:))>=mean(diag(cov_x))
 else
     f = fspecial('disk', s); % circular mean convolution kernel
     SR=conv2(SR,f,'same');
-
 end
+
 XO=X.*normalization(SR);
 [C] = col_max_pooling(XO,N,e); % Channel attention coefficients
 XO_c = XO.*permute(C,[1,3,2]);%
@@ -72,7 +72,6 @@ if nargin < 3
 [i,j]=get_mean_point(S1);
 end
 rst2=map_autogaussian(S1,i,j);
-
 rst = bsxfun(@times, S1, rst2);
 rst_norm = sqrt(sum(rst(:).^2));
 rst = (rst /rst_norm).^(1/2);
