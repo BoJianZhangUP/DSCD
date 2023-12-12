@@ -27,8 +27,8 @@ for m=1:7
 
 
 
-    fprintf(['>> %s: %s: %s: %d dim:\n   nocrop: PWnocrop_mAP:%.4f,PWnocrop_qe_mAP:%.4f,PWPnocrop_mAP:%.4f,PWPnocrop_qe_mAP:%.4f\n \n'], net,layers,test_set, dim, ...
-        PWnocrop_map,PWnocrop_qe_map,PWPnocrop_map,PWPnocrop_qe_map);
+    fprintf(['>> %s: %s: %s: %d dim:\n   nocrop: PWnocrop_mAP:%.4f,PWnocrop_qe_mAP:%.4f,APWnocrop_mAP:%.4f,APWnocrop_qe_mAP:%.4f\n \n'], net,layers,test_set, dim, ...
+        PWnocrop_map,PWnocrop_qe_map,APWnocrop_map,APWnocrop_qe_map);
 end
 
 
