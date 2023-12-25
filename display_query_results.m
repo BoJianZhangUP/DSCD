@@ -22,8 +22,8 @@ for m=1:7
     [~, PWPcrop_ranks] = sort(dist, 'ascend');
     [PWPnocrop_map,~] = compute_map (PWPcrop_ranks, gnd);
 
-    [PWPranks_QE] = rank_qe(PWP_test_features_pca', APW_query_nocrop_features_pca', PWPcrop_ranks,qe);
-    [PWPnocrop_qe_map,~] = compute_map (PWPranks_QE, gnd);
+    [APWranks_QE] = rank_qe(PWP_test_features_pca', APW_query_nocrop_features_pca', PWPcrop_ranks,qe);
+    [APWnocrop_qe_map,~] = compute_map (PWPranks_QE, gnd);
 
 
 
