@@ -12,7 +12,7 @@ extract_net_features(imagedata,net,netname,layer)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function []=extract_net_features(imagedata,net,netname,layer)
 
-imagePath = dir(fullfile('G:\zhangbojian\matlab_paper\data\VGG16\datasets\',imagedata,'*.jpg'));
+imagePath = dir(fullfile('..\data\VGG16\datasets\',imagedata,'*.jpg'));
 minsize=224;
 folderPath = fullfile('..\data\',netname,'\',layer,'\',strtok(imagedata, '_'));
 
