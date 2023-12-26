@@ -8,7 +8,7 @@ for m=1:7
     [PW_test_features_pca,PW_query_nocrop_features_pca]=APW_whitening(train_features_normalize,test_features_normalize,query_nocrop_features_normalize,dim);
 
     %%%%%%% APW %%%%%%
-    [PWP_test_features_pca,APW_query_nocrop_features_pca]=APW_whitening(train_features_normalize,test_features_normalize,query_nocrop_features_normalize,dim,'APW');
+    [APW_test_features_pca,APW_query_nocrop_features_pca]=APW_whitening(train_features_normalize,test_features_normalize,query_nocrop_features_normalize,dim,'APW');
 
 
     PW_dist=pdist2(PW_test_features_pca,PW_query_nocrop_features_pca,'euclidean');
@@ -18,12 +18,12 @@ for m=1:7
     [ranks_QE] = rank_qe(PW_test_features_pca', PW_query_nocrop_features_pca', PW_ranks,qe);
     [PWnocrop_qe_map,~] = compute_map (ranks_QE, gnd);
 
-    dist=pdist2(PWP_test_features_pca,APW_query_nocrop_features_pca,'euclidean');
-    [~, PWPcrop_ranks] = sort(dist, 'ascend');
-    [PWPnocrop_map,~] = compute_map (PWPcrop_ranks, gnd);
+    dist=pdist2(APW_test_features_pca,APW_query_nocrop_features_pca,'euclidean');
+    [~, APWcrop_ranks] = sort(dist, 'ascend');
+    [APWnocrop_map,~] = compute_map (APWcrop_ranks, gnd);
 
-    [APWranks_QE] = rank_qe(PWP_test_features_pca', APW_query_nocrop_features_pca', PWPcrop_ranks,qe);
-    [APWnocrop_qe_map,~] = compute_map (PWPranks_QE, gnd);
+    [APWranks_QE] = rank_qe(APW_test_features_pca', APW_query_nocrop_features_pca', APWcrop_ranks,qe);
+    [APWnocrop_qe_map,~] = compute_map (APWranks_QE, gnd);
 
 
 
