@@ -24,18 +24,18 @@ switch image_num
     case {'106'}
         test_set='paris106k';
         query_set='paris6k';
-        query_files = dir(fullfile(datapath,netname,'\datasets\',['paris6k','_nquery_name'],'*.mat'));
+        query_files = dir(fullfile(datapath,netname,'\datasets\',['paris6k','_nquery_pool5'],'*.mat'));
     case {'105'}
         test_set='oxford105k';
         query_set='oxford5k';
-        query_files = dir(fullfile(datapath,netname,'\datasets\',['oxford5k','_nquery_name'],'*.mat'));
+        query_files = dir(fullfile(datapath,netname,'\datasets\',['oxford5k','_nquery_pool5'],'*.mat'));
 end
 
 
-test_files = dir(fullfile(datapath,netname,'\pool5\',test_set,'*.mat'));
-train_files = dir(fullfile(datapath,netname,'\pool5\',train_set,'*.mat'));
+test_files = dir(fullfile(datapath,netname,'\datasets\'，[test_set,'_pool5'],'*.mat'));
+train_files = dir(fullfile(datapath,netname,'\datasets\'，[train_set,'_pool5'],'*.mat'));
 if ~exist("query_files","var")
-    query_files = dir(fullfile(datapath,netname,'\pool5\',[test_set,'_query'],'*.mat'));
+    query_files = dir(fullfile(datapath,netname,'\datasets\'，[test_set,'_nquery_pool5'],'*.mat'));
 end
 
 [ind,cov_x]=var_v(train_files); % calculate covariance matrix
