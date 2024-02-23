@@ -24,11 +24,11 @@ switch image_num
     case {'106'}
         test_set='paris106k';
         query_set='paris6k';
-        query_files = dir(fullfile(datapath,net,'\datasets\',['paris6k','_nquery_name'],'*.mat'));
+        query_files = dir(fullfile(datapath,netname,'\datasets\',['paris6k','_nquery_name'],'*.mat'));
     case {'105'}
         test_set='oxford105k';
         query_set='oxford5k';
-        query_files = dir(fullfile(datapath,net,'\datasets\',['oxford5k','_nquery_name'],'*.mat'));
+        query_files = dir(fullfile(datapath,netname,'\datasets\',['oxford5k','_nquery_name'],'*.mat'));
 end
 
 
