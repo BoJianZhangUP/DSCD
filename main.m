@@ -2,7 +2,7 @@ clear;
 %%% parameters seting
 netname='vgg16';      %% network
 layers='pool5';
-image_num='r5'; % 5-oxford5k,6-paris6k,105-oxford105k,106-paris106k,r5-roxford5k,r6-rparis6k,
+image_num='r5'; % 5-oxford5k,6-paris6k,105-oxford105k,106-paris106k,r5-roxford,r6-rparis,
 datapath='..\data\';
 train_set='GLD5k';
 
@@ -16,11 +16,11 @@ switch image_num
         test_set='paris6k';
         query_set='paris6k';
     case {'r5'}
-        test_set='roxford5k';
-        query_set='roxford5k';  
+        test_set='roxford';
+        query_set='roxford';  
     case {'r6'}
-        test_set='rparis6k';
-        query_set='rparis6k'; 
+        test_set='rparis';
+        query_set='rparis'; 
     case {'106'}
         test_set='paris106k';
         query_set='paris6k';
@@ -63,7 +63,7 @@ end
 warning off;
 
 
-if  strcmpi(test_set,'roxford5k') || strcmpi(test_set,'rparis6k')
+if  strcmpi(test_set,'roxford') || strcmpi(test_set,'rparis')
     display_rquery_results(test_set,train_features_normalize,test_features_normalize,query_nocrop_features_normalize,gnd);
 else
     display_query_results(netname,layers,test_set,train_features_normalize,test_features_normalize,query_nocrop_features_normalize,gnd,qe);
