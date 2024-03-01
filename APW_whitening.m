@@ -1,6 +1,6 @@
 function [test_feature_pca,query_feature_pca] = APW_whitening(train_features_normalize,test_features_normalize,query_features,dim,APW)
 
-pp=20;
+pp=20; %num(CC=1)
 if nargin==5
     %%% APW %%%%
     [PW_feature,coeff,mu,u,s,~]= pca_and_whitening(train_features_normalize,test_features_normalize);
