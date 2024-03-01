@@ -1,7 +1,7 @@
 function [pw_feature,coeff,mu,u,s,idx] = pca_and_whitening(XTrain,XText,dim)
 
 [coeff,scoreTrain,~,~,explained,mu]=pca(XTrain);
-
+%%%%%%    Inspired by: https://ww2.mathworks.cn/help/stats/pca.html?searchHighlight=PCA&s_tid=srchtitle_support_results_1_PCA (idx = find(cumsum(explained)>95,1))%%%%%%%%%
 if nargin==2
     sum_explained = 0;
     idx = 0;
