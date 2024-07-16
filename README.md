@@ -7,5 +7,8 @@ The path to query image features is：../data/vgg16/datasets/oxford5k_nquery_poo
 
 Since our method is able to locate the target object, there is no need to use a crop box in the query images to obtain the position of the target object, so we do not crop the query images.
 
+Image data and features can be downloaded via the following link：https://pan.baidu.com/s/1Je2RmpVH3n6QwrFDDc9B0A?pwd=lvyj Retrieve code：lvyj 
+
+
 For any queries regarding the paper and code you can contact us at: zbjyouxiang2020@163.com
 
